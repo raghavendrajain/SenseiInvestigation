@@ -16,7 +16,7 @@ void MyController::onInit(InitEvent &evt) {
 double MyController::onAction(ActionEvent &evt) {  
 
   SimObj *obj = getObj(myname());  //obtaining handle to the agent  
-  obj->setLinearVelocity(0,0,100); //apply the velocity 20[m/s] in Z direction  
+  obj->setAngularVelocity(0,1000,0); //apply the velocity 1000[rad/s] about Y axis  
   return 0.00001;    
       
 }  
