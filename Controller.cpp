@@ -35,7 +35,13 @@ void MyController::onInit(InitEvent &evt) {
 double MyController::onAction(ActionEvent &evt) {  
 
   SimObj *obj = getObj(myname());  //obtaining handle to the agent  
-  obj->setLinearVelocity(0,0,100); //apply the linear velocity 20[m/s] in Z axis  
+
+  // obj->setLinearVelocity(0,0,100); //apply the linear velocity 100[m/s] in Z axis  
+  // obj->addForce(0,0,10000); //apply the orce of 10000[N] in Z axis  
+  obj->addTorque(0,10000,0); // apply the torque of  10000[N.m] about Y axis. 
+  // obj->setAngularVelocity(0,10000,0); // apply the angular velocity of 1000 [radians/s] about Y axis
+
+
   Vector3d currentVelocity;
   obj->getLinearVelocity(currentVelocity);
   
@@ -43,10 +49,10 @@ double MyController::onAction(ActionEvent &evt) {
   {
   		myfile << currentVelocity.x() << " , "  <<  currentVelocity.z() << "\n" ;
   }
-  if(evt.time() > 15)
-  {
-  	exit(0);
-  }
+  // if(evt.time() > 15)
+  // {
+  // 	exit(0);
+  // }
 
   return 0.00001;    
       
