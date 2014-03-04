@@ -36,8 +36,6 @@
    <set-attr-value name="dynamics" value="true"/>
    <set-attr-value name="collision" value="true"/>
 
-   <!-- Please comment out this line below for object to be close to horizontal part, and use line 41 -->
-   <!-- <set-attr-value name="x" value="50.0"/>    -->
    <set-attr-value name="x" value="5.0"/> 
    <set-attr-value name="y" value="1.0"/>
    <set-attr-value name="z" value="43.0"/>
@@ -51,7 +49,39 @@
 
 </instanciate>
 
+<!-- The shapes below are defined with using OpenHRP format -->
 
+<!--  <instanciate class="seTool.xml">  
+  
+   <set-attr-value name="name" value="box_000"/>  
+   <set-attr-value name="mass" value="4.5"/>  
+   <set-attr-value name="language" value="c++"/>  
+   <set-attr-value name="implementation"  
+                    value="./Controller.so"/>  
+   <set-attr-value name="dynamics" value="true"/>  
+   <set-attr-value name="collision" value="true"/>  
+
+    <set-attr-value name="x" value="10.0"/>
+    <set-attr-value name="y" value="1.0"/>
+    <set-attr-value name="z" value="40.0"/>
+
+   </instanciate> -->
+
+
+
+<!--  <instanciate class="seBox.xml">  
+  
+   <set-attr-value name="name" value="box_001"/>  
+   <set-attr-value name="mass" value="0.5"/>    
+   <set-attr-value name="language" value="c++"/>  
+   <set-attr-value name="dynamics" value="true"/>  
+   <set-attr-value name="collision" value="true"/>  
+     
+   <set-attr-value name="x" value="10.0"/> 
+   <set-attr-value name="y" value="1.0"/>
+   <set-attr-value name="z" value="43.0"/>
+
+   </instanciate> -->
 
 
 
